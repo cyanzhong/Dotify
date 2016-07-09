@@ -4,6 +4,15 @@
 
 Convert `[[AnObject method1] method2]` to `AnObject.method1.method2` with [Xcode Extension](https://developer.apple.com/videos/play/wwdc2016/414/)
 
+# Editor Menu
+![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/menu.gif)
+
+# Set Xcode Key-Binding
+![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/key-binding.gif)
+
+# Use Shortcut
+![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/shortcut.gif)
+
 # What is it
 [xTextHandler](https://github.com/cyanzhong/xTextHandler) based tool to convert Objective-C syntax
 
