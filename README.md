@@ -6,6 +6,7 @@ Convert `[[AnObject method1] method2]` to `AnObject.method1.method2` with [Xcode
 
 # Editor Menu
 ![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/menu.gif)
+![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/setter.gif)
 
 # Set Xcode Key-Binding
 ![image](https://raw.githubusercontent.com/cyanzhong/Dotify/master/GIFs/key-binding.gif)
@@ -18,6 +19,7 @@ Convert `[[AnObject method1] method2]` to `AnObject.method1.method2` with [Xcode
 
 # Features
 - `[[AnObject method1] method2]` -> `AnObject.method1.method2`
+- `[self setAlpha:0.5]` -> `self.alpha = 0.5`
 - Multiline Selections
 - Key-Binding available
 - Swift 3.0
