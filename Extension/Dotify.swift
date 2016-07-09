@@ -26,6 +26,7 @@ func dotify(code: String) -> String {
                     let object = result.substring(with: r1)
                     let method = result.substring(with: r2)
                     result.replaceCharacters(in: range, with: "\(object).\(method)")
+                    stop.initialize(with: true)
                 }
             })
         }
