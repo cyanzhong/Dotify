@@ -8,10 +8,11 @@
 
 import Foundation
 
-func dotify(code: String) -> String {
+typealias replaceHandler = (result: TextCheckingResult?, text: NSMutableString) -> NSMutableString
+
+func replace(code: String, pattern: String, handler: replaceHandler) -> String {
     
-    let pattern = "\\[ *([a-zA-Z0-9_$\\.]+) +([a-zA-Z0-9_$\\.]+) *\\]"
-    let result = NSMutableString(string: code)
+    var result = NSMutableString(string: code)
     
     do {
         let regex = try RegularExpression(pattern: pattern, options: [])
@@ -22,12 +23,11 @@ func dotify(code: String) -> String {
                 break
             }
             regex.enumerateMatches(in: text, options: [], range: range, using: { matchResult, flags, stop in
-                if let range = matchResult?.range, r1 = matchResult?.range(at: 1), r2 = matchResult?.range(at: 2) {
-                    let object = result.substring(with: r1)
-                    let method = result.substring(with: r2)
-                    result.replaceCharacters(in: range, with: "\(object).\(method)")
+                let modified = handler(result: matchResult, text: result)
+                if !result.isEqual(to: modified) {
                     stop.initialize(with: true)
                 }
+                result = modified
             })
         }
     } catch {
@@ -35,4 +35,36 @@ func dotify(code: String) -> String {
     }
     
     return result as String
+}
+
+extension String {
+    
+    func dotify(pattern: String, handler: replaceHandler) -> String {
+        return replace(code: self, pattern: pattern, handler: handler)
+    }
+    
+    func lowecaseFirst() -> String {
+        return String(self.characters.prefix(1)).lowercased() + String(self.characters.dropFirst())
+    }
+}
+
+func dotify(code: String) -> String {
+    return code.dotify(pattern: "\\[ *([a-zA-Z0-9_$\\.]+) +([a-zA-Z0-9_$\\.]+) *\\]", handler: { result, text -> NSMutableString in
+        // [AnObject method1] -> AnObject.method1
+        if let range = result?.range, r1 = result?.range(at: 1), r2 = result?.range(at: 2) {
+            let object = text.substring(with: r1)
+            let method = text.substring(with: r2)
+            text.replaceCharacters(in: range, with: "\(object).\(method)")
+        }
+        return text
+    }).dotify(pattern: "\\[ *([a-zA-Z0-9_$]+) +set([a-zA-Z0-9_$]+) *: *(.+) *\\]", handler: { result, text -> NSMutableString in
+        // [self setUserInteractionEnabled:NO] -> self.userInteractionEnabled = NO
+        if let range = result?.range, r1 = result?.range(at: 1), r2 = result?.range(at: 2), r3 = result?.range(at: 3) {
+            let object = text.substring(with: r1)
+            let method = (text.substring(with: r2) as String).lowecaseFirst()
+            let value = text.substring(with: r3)
+            text.replaceCharacters(in: range, with: "\(object).\(method) = \(value)")
+        }
+        return text
+    })
 }
