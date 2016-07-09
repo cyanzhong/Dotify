@@ -10,12 +10,12 @@ Convert `[[AnObject method1] method2]` to `AnObject.method1.method2` with [Xcode
 # Features
 - `[[AnObject method1] method2]` -> `AnObject.method1.method2`
 - Multiline Selections
-- Clipboard Text Handling (if no selection is made)
+- Key-Binding available
 - Swift 3.0
 
 # Usage
 1. Install Xcode 8
-2. sudo /usr/libexec/xpccachectl in macOS EI Capitan
+2. `sudo /usr/libexec/xpccachectl` in macOS EI Capitan
 3. Build & Run
 4. Choose Xcode to debug
 5. Select text
