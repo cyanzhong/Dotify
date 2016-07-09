@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		877981A21D30A24E0043CED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877981A11D30A24E0043CED3 /* AppDelegate.swift */; };
+		877981A41D30A24E0043CED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877981A31D30A24E0043CED3 /* ViewController.swift */; };
+		877981A61D30A24E0043CED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 877981A51D30A24E0043CED3 /* Assets.xcassets */; };
+		877981A91D30A24E0043CED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877981A71D30A24E0043CED3 /* Main.storyboard */; };
+		877981B71D30A28C0043CED3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877981B61D30A28C0043CED3 /* Cocoa.framework */; };
+		877981BC1D30A28C0043CED3 /* DotifyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877981BB1D30A28C0043CED3 /* DotifyExtension.swift */; };
+		877981BE1D30A28C0043CED3 /* DotifyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877981BD1D30A28C0043CED3 /* DotifyCommand.swift */; };
+		877981C21D30A28C0043CED3 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 877981B41D30A28C0043CED3 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		877EF1791D30EFC7003D5661 /* xHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF1741D30EFC7003D5661 /* xHelper.swift */; };
+		877EF17A1D30EFC7003D5661 /* xTextCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF1751D30EFC7003D5661 /* xTextCommand.swift */; };
+		877EF17B1D30EFC7003D5661 /* xTextMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF1761D30EFC7003D5661 /* xTextMatcher.swift */; };
+		877EF17C1D30EFC7003D5661 /* xTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF1771D30EFC7003D5661 /* xTextModifier.swift */; };
+		877EF17D1D30EFC7003D5661 /* xTextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877EF1781D30EFC7003D5661 /* xTextProtocol.swift */; };
+		87DBE64C1D30DA8B00DD2D5F /* Dotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DBE64B1D30DA8B00DD2D5F /* Dotify.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		877981C01D30A28C0043CED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 877981961D30A24E0043CED3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 877981B31D30A28C0043CED3;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		877981C61D30A28C0043CED3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				877981C21D30A28C0043CED3 /* Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8779819E1D30A24E0043CED3 /* Dotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		877981A11D30A24E0043CED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		877981A31D30A24E0043CED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		877981A51D30A24E0043CED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		877981A81D30A24E0043CED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		877981AA1D30A24E0043CED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877981B41D30A28C0043CED3 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		877981B61D30A28C0043CED3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		877981BA1D30A28C0043CED3 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Extension.entitlements; sourceTree = "<group>"; };
+		877981BB1D30A28C0043CED3 /* DotifyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotifyExtension.swift; sourceTree = "<group>"; };
+		877981BD1D30A28C0043CED3 /* DotifyCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotifyCommand.swift; sourceTree = "<group>"; };
+		877981BF1D30A28C0043CED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		877EF1741D30EFC7003D5661 /* xHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xHelper.swift; sourceTree = "<group>"; };
+		877EF1751D30EFC7003D5661 /* xTextCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextCommand.swift; sourceTree = "<group>"; };
+		877EF1761D30EFC7003D5661 /* xTextMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextMatcher.swift; sourceTree = "<group>"; };
+		877EF1771D30EFC7003D5661 /* xTextModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextModifier.swift; sourceTree = "<group>"; };
+		877EF1781D30EFC7003D5661 /* xTextProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xTextProtocol.swift; sourceTree = "<group>"; };
+		87DBE64B1D30DA8B00DD2D5F /* Dotify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dotify.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8779819B1D30A24E0043CED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877981B11D30A28C0043CED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877981B71D30A28C0043CED3 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		877981951D30A24E0043CED3 = {
+			isa = PBXGroup;
+			children = (
+				877EF1731D30EFC7003D5661 /* xLibrary */,
+				877981A01D30A24E0043CED3 /* Dotify */,
+				877981B81D30A28C0043CED3 /* Extension */,
+				877981B51D30A28C0043CED3 /* Frameworks */,
+				8779819F1D30A24E0043CED3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8779819F1D30A24E0043CED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8779819E1D30A24E0043CED3 /* Dotify.app */,
+				877981B41D30A28C0043CED3 /* Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		877981A01D30A24E0043CED3 /* Dotify */ = {
+			isa = PBXGroup;
+			children = (
+				877981A11D30A24E0043CED3 /* AppDelegate.swift */,
+				877981A31D30A24E0043CED3 /* ViewController.swift */,
+				877981C71D30A29B0043CED3 /* Supporting Files */,
+			);
+			path = Dotify;
+			sourceTree = "<group>";
+		};
+		877981B51D30A28C0043CED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				877981B61D30A28C0043CED3 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		877981B81D30A28C0043CED3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87DBE64B1D30DA8B00DD2D5F /* Dotify.swift */,
+				877981BB1D30A28C0043CED3 /* DotifyExtension.swift */,
+				877981BD1D30A28C0043CED3 /* DotifyCommand.swift */,
+				877981B91D30A28C0043CED3 /* Supporting Files */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		877981B91D30A28C0043CED3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877981BF1D30A28C0043CED3 /* Info.plist */,
+				877981BA1D30A28C0043CED3 /* Extension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		877981C71D30A29B0043CED3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				877981A51D30A24E0043CED3 /* Assets.xcassets */,
+				877981A71D30A24E0043CED3 /* Main.storyboard */,
+				877981AA1D30A24E0043CED3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		877EF1731D30EFC7003D5661 /* xLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				877EF1741D30EFC7003D5661 /* xHelper.swift */,
+				877EF1781D30EFC7003D5661 /* xTextProtocol.swift */,
+				877EF1761D30EFC7003D5661 /* xTextMatcher.swift */,
+				877EF1771D30EFC7003D5661 /* xTextModifier.swift */,
+				877EF1751D30EFC7003D5661 /* xTextCommand.swift */,
+			);
+			path = xLibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8779819D1D30A24E0043CED3 /* Dotify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877981AD1D30A24E0043CED3 /* Build configuration list for PBXNativeTarget "Dotify" */;
+			buildPhases = (
+				8779819A1D30A24E0043CED3 /* Sources */,
+				8779819B1D30A24E0043CED3 /* Frameworks */,
+				8779819C1D30A24E0043CED3 /* Resources */,
+				877981C61D30A28C0043CED3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				877981C11D30A28C0043CED3 /* PBXTargetDependency */,
+			);
+			name = Dotify;
+			productName = Dotify;
+			productReference = 8779819E1D30A24E0043CED3 /* Dotify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		877981B31D30A28C0043CED3 /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 877981C31D30A28C0043CED3 /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				877981B01D30A28C0043CED3 /* Sources */,
+				877981B11D30A28C0043CED3 /* Frameworks */,
+				877981B21D30A28C0043CED3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Extension;
+			productName = Extension;
+			productReference = 877981B41D30A28C0043CED3 /* Extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		877981961D30A24E0043CED3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = cyan;
+				TargetAttributes = {
+					8779819D1D30A24E0043CED3 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TCKG8FBVG6;
+						DevelopmentTeamName = "YING ZHONG";
+						ProvisioningStyle = Automatic;
+					};
+					877981B31D30A28C0043CED3 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TCKG8FBVG6;
+						DevelopmentTeamName = "YING ZHONG";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 877981991D30A24E0043CED3 /* Build configuration list for PBXProject "Dotify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 877981951D30A24E0043CED3;
+			productRefGroup = 8779819F1D30A24E0043CED3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8779819D1D30A24E0043CED3 /* Dotify */,
+				877981B31D30A28C0043CED3 /* Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8779819C1D30A24E0043CED3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877981A61D30A24E0043CED3 /* Assets.xcassets in Resources */,
+				877981A91D30A24E0043CED3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877981B21D30A28C0043CED3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8779819A1D30A24E0043CED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877981A41D30A24E0043CED3 /* ViewController.swift in Sources */,
+				877981A21D30A24E0043CED3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		877981B01D30A28C0043CED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877EF17C1D30EFC7003D5661 /* xTextModifier.swift in Sources */,
+				877EF17B1D30EFC7003D5661 /* xTextMatcher.swift in Sources */,
+				877EF1791D30EFC7003D5661 /* xHelper.swift in Sources */,
+				877981BC1D30A28C0043CED3 /* DotifyExtension.swift in Sources */,
+				877981BE1D30A28C0043CED3 /* DotifyCommand.swift in Sources */,
+				877EF17D1D30EFC7003D5661 /* xTextProtocol.swift in Sources */,
+				877EF17A1D30EFC7003D5661 /* xTextCommand.swift in Sources */,
+				87DBE64C1D30DA8B00DD2D5F /* Dotify.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		877981C11D30A28C0043CED3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 877981B31D30A28C0043CED3 /* Extension */;
+			targetProxy = 877981C01D30A28C0043CED3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		877981A71D30A24E0043CED3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				877981A81D30A24E0043CED3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		877981AB1D30A24E0043CED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		877981AC1D30A24E0043CED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		877981AE1D30A24E0043CED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.dotify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		877981AF1D30A24E0043CED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Dotify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.dotify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		877981C41D30A28C0043CED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.dotify.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		877981C51D30A28C0043CED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = app.cyan.dotify.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		877981991D30A24E0043CED3 /* Build configuration list for PBXProject "Dotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877981AB1D30A24E0043CED3 /* Debug */,
+				877981AC1D30A24E0043CED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877981AD1D30A24E0043CED3 /* Build configuration list for PBXNativeTarget "Dotify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877981AE1D30A24E0043CED3 /* Debug */,
+				877981AF1D30A24E0043CED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		877981C31D30A28C0043CED3 /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				877981C41D30A28C0043CED3 /* Debug */,
+				877981C51D30A28C0043CED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 877981961D30A24E0043CED3 /* Project object */;
+}
