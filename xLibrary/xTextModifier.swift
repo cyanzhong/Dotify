@@ -1,4 +1,11 @@
 //
+//  ██╗  ██╗████████╗███████╗██╗  ██╗████████╗
+//  ╚██╗██╔╝╚══██╔══╝██╔════╝╚██╗██╔╝╚══██╔══╝
+//   ╚███╔╝    ██║   █████╗   ╚███╔╝    ██║
+//   ██╔██╗    ██║   ██╔══╝   ██╔██╗    ██║
+//  ██╔╝ ██╗   ██║   ███████╗██╔╝ ██╗   ██║
+//  ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝   ╚═╝
+//
 //  xTextModifier.swift
 //  xTextHandler (https://github.com/cyanzhong/xTextHandler/)
 //
@@ -68,7 +75,7 @@ class xTextModifier {
             // handle selected text
             var texts: Array<String> = []
             if regex != nil { // match using regex
-                regex!.enumerateMatches(in: match.text, options: RegularExpression.MatchingOptions(rawValue: 0), range: match.range, using: { result, flags, stop in
+                regex!.enumerateMatches(in: match.text, options: [], range: match.range, using: { result, flags, stop in
                     if let range = result?.range(at: 1) {
                         texts.append((match.text as NSString).substring(with: range))
                     }
