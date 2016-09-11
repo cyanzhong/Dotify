@@ -90,7 +90,7 @@ class xTextMatcher {
         // enumerate lines
         for index in startLine...endLine {
             
-            let line = invocation.buffer.lines[index]
+            let line = invocation.buffer.lines[index] as! NSString
             var clipped: String
             
             if startLine == endLine { // single line
@@ -100,11 +100,11 @@ class xTextMatcher {
             } else if index == endLine { // last line
                 clipped = line.substring(to: endColumn + 1)
             } else { // common line
-                clipped = line as! String
+                clipped = line as String
             }
             
             if clipped.characters.count > 0 {
-                lineHandler(index, line as! String, clipped)
+                lineHandler(index, line as String, clipped)
             }
         }
     }
