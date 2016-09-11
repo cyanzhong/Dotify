@@ -97,7 +97,8 @@ class xTextModifier {
             }
             
             // separate text to lines using newline charset
-            let lines = replace.components(separatedBy: NSCharacterSet.newlines)
+            var lines = replace.components(separatedBy: NSCharacterSet.newlines)
+            lines.removeLast()
             // update buffer
             invocation.buffer.lines.replaceObjects(in: NSMakeRange(range.start.line, range.end.line - range.start.line + 1), withObjectsFrom: lines)
             // cancel selection
